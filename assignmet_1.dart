@@ -1,15 +1,16 @@
+//Create an abstract class vehicle with
 abstract class Vehicle {
-  int _speed = 3;
-  void move();
+  double _speed = 60.5; // a protected variable _speed
+  void move();  // an abstract method move()
 
-  set setSpeed(int value) {
-    _speed = value;
+  set setSpeed(double speed) {   // An non-abstract method setSpeed(int speed) to set the speed
+    _speed = speed;
   }
 }
 
-class Car extends Vehicle {
+class Car extends Vehicle {   //Create a subClass Car that extends Vehicle
   @override
-  void move() {
+  void move() {   //Implement the move() method to print ("The car is moving at $_speed")
     print("The car is moving at $_speed");
   }
 }
